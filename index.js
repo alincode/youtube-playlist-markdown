@@ -1,6 +1,5 @@
 const debug = require('debug')('youtubePlaylistMarkdown');
 const fs = require('fs')
-var writeFile = require('write');
 const table = require('markdown-table')
 const PlaylistSummary = require('youtube-playlist-summary');
 const config = require('config');
