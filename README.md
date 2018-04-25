@@ -12,8 +12,12 @@ npm i youtube-playlist-markdown --save
 
 ```
 const youtubePlaylistMarkdown = require('youtube-playlist-markdown');
-const config = require('config');
 const CHANNEL_ID = 'UCJi9ZAuo99MqMuJUXiJjpsA';
+
+const config = {
+    "GOOOGLE_API_KEY": "YOUR_GOOOGLE_API_KEY",
+    "MARKDOWN_FILE_NAME": "generator.md"
+}
 
 youtubePlaylistMarkdown(CHANNEL_ID, config);
 ```
