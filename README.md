@@ -22,7 +22,7 @@ youtubePlaylistMarkdown(CHANNEL_ID, config);
 
 #### 【Modern Web 2015】Keynote 
 
-* [link](https://www.youtube.com/playlist?list=PLr0GICQoHA0J0LHVHVqbhckIF7pnUCsjX) 
+* [playlist link](https://www.youtube.com/playlist?list=PLr0GICQoHA0J0LHVHVqbhckIF7pnUCsjX) 
 * video count: 4 
 
 | title                                                                                                           | Published At |
