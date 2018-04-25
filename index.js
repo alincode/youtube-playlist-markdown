@@ -6,10 +6,10 @@ const PlaylistSummary = require('youtube-playlist-summary');
 const config = require('config');
 const ps = new PlaylistSummary(config);
 
-const generator = async function (CHANNEL_ID, config) {
+const generator = async function (config) {
   debug('=== generator ===');
   try {
-    let result = await ps.getSummary(CHANNEL_ID);
+    let result = await ps.getSummary(config.CHANNEL_ID);
     let file = fs.createWriteStream(config.MARKDOWN_FILE_NAME);
     result.forEach(function (playlist, index) {
       let tableContent = [];
