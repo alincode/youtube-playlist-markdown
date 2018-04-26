@@ -17,11 +17,12 @@
 ```
 npm i youtube-playlist-markdown --save
 ```
+
 ## Example
 
 ### try it
 
-```
+```js
 const youtubePlaylistMarkdown = require('youtube-playlist-markdown');
 
 const config = {
@@ -38,7 +39,7 @@ or
 
 Then make your own config, you could copy `config/example.json` to `config/development.json`.
 
-```
+```bash
 git clone https://github.com/alincode/youtube-playlist-markdown
 cd youtube-playlist-markdown
 cp config/default.json config/development.json
