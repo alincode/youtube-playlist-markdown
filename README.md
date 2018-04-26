@@ -8,6 +8,7 @@
 ### Features
 
 * it could help you easy to get all playlist informations.
+* you could use `TODO` variable to change the table style.
 ### Requirements
 
 * node 8.x.x
@@ -16,7 +17,6 @@
 ```
 npm i youtube-playlist-markdown --save
 ```
-
 ## Example
 
 ### try it
@@ -27,13 +27,16 @@ const youtubePlaylistMarkdown = require('youtube-playlist-markdown');
 const config = {
     "GOOOGLE_API_KEY": "YOUR_GOOOGLE_API_KEY",
     "MARKDOWN_FILE_NAME": "generator.md",
-    "CHANNEL_ID": "UCJi9ZAuo99MqMuJUXiJjpsA"
+    "CHANNEL_ID": "UCJi9ZAuo99MqMuJUXiJjpsA",
+    "TODO": false
 }
 
 youtubePlaylistMarkdown(config);
 ```
 
 or
+
+Then make your own config, you could copy `config/example.json` to `config/development.json`.
 
 ```
 git clone https://github.com/alincode/youtube-playlist-markdown
