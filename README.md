@@ -1,9 +1,9 @@
 # Youtube playlist markdown
 
-![GitHub package version](https://img.shields.io/github/package-json/v/badges/shields.svg)
+<!-- ![GitHub package version](https://img.shields.io/github/package-json/v/badges/shields.svg)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Dependency Status](https://img.shields.io/david/alincode/youtube-playlist-markdown.svg?style=flat)](https://david-dm.org/alincode/youtube-playlist-markdown)
-![node version](https://img.shields.io/node/v/youtube-playlist-markdown.svg)
+![node version](https://img.shields.io/node/v/youtube-playlist-markdown.svg) -->
 
 ### Features
 
