@@ -4,11 +4,13 @@
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![node version](https://img.shields.io/node/v/youtube-playlist-markdown.svg)
 
+it could help you scan all playlist information and generate friendly markdown table.
+
 <!-- [![Dependency Status](https://img.shields.io/david/alincode/youtube-playlist-markdown.svg?style=flat)](https://david-dm.org/alincode/youtube-playlist-markdown) -->
 
 ### Features
 
-* it could help you easy to get all playlist informations.
+* you could choice get all playlist or only one.
 * you could use `TODO` variable to change the table style.
 ### Requirements
 
