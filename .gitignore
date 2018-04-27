@@ -64,3 +64,6 @@ example/config/development.json
 package-lock.json
 generator.md
 config/development.json
+
+playlist-*.md
+channel-*.md

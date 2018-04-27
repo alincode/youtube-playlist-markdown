@@ -27,11 +27,20 @@ npm i youtube-playlist-markdown --save
 ```js
 const youtubePlaylistMarkdown = require('youtube-playlist-markdown');
 
+// if you want get all playlist
 const config = {
     "GOOOGLE_API_KEY": "YOUR_GOOOGLE_API_KEY",
-    "MARKDOWN_FILE_NAME": "generator.md",
+    "MARKDOWN_FILE_NAME": "generator.md", // option
     "CHANNEL_ID": "UCJi9ZAuo99MqMuJUXiJjpsA",
-    "TODO": false
+    "TODO": false // option
+}
+
+// if you want get only one playlist
+const config = {
+    "GOOOGLE_API_KEY": "YOUR_GOOOGLE_API_KEY",
+    "MARKDOWN_FILE_NAME": "generator.md", // option
+    "PLAYLIST_ID": "PL0y7qCn3hjLbmQ5_aQZEfQDQCgcK6A2CP",
+    "TODO": false // option
 }
 
 youtubePlaylistMarkdown(config);
