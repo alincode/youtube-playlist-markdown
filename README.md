@@ -53,6 +53,10 @@ npm start
 
 ![](assets/output.png)
 
+## Relevant Projects
+
+* [youtube-playlist-summary](https://github.com/alincode/youtube-playlist-summary)
+
 ## License
 
-[MIT](LICENSE)
+MIT © [alincode](https://github.com/alincode/youtube-playlist-markdown)
