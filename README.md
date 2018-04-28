@@ -16,15 +16,13 @@ Look like this.
 
 #### [【Modern Web 2015】國際會議廳 議程](https://www.youtube.com/playlist?list=PLr0GICQoHA0KDNV0HkH10_ieusLd_KVaz) created by [Modern Web](https://www.youtube.com/channel/UCJi9ZAuo99MqMuJUXiJjpsA)
 
-* video count: 12 
+* video count: 3
 
 | title                                                                                                                              | Published At |
 | ---------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | [【Modern Web 2015】三維架構方法 - 蔡學鏞](https://www.youtube.com/watch?v=6mxmVh0u8_k)                                                       | 2015-06-12   |
 | [【Modern Web 2015】雲端系統對爆量的測試與準備 ­ 以張惠妹秒殺售票為例 - 邱光宗](https://www.youtube.com/watch?v=-bLYwGTcNRc)                                   | 2015-06-12   |
 | [【Modern Web 2015】TypeScript 過去現在未來 - 高偉格OThree](https://www.youtube.com/watch?v=qFrvC7TQS14)                                      | 2015-06-12   |
-| [【Modern Web 2015】ASP.NET 5 的創新與變革 - 保哥Will](https://www.youtube.com/watch?v=zqzZVSdKy1Y)                                          | 2015-06-12   |
-| [【Modern Web 2015】1UA MultiScreen - 郭志偉Alive Kuo](https://www.youtube.com/watch?v=dLI3rS_x0fQ)                                     | 
 
 ---
 ### Features
