@@ -6,6 +6,10 @@
 
 it could help you scan all playlist information and generate friendly markdown table.
 
+![](assets/output.jpg)
+
+[Output Example](https://github.com/alincode/youtube-playlist-markdown/blob/master/output_example.md)
+
 <!-- [![Dependency Status](https://img.shields.io/david/alincode/youtube-playlist-markdown.svg?style=flat)](https://david-dm.org/alincode/youtube-playlist-markdown) -->
 
 ### Features
@@ -21,10 +25,25 @@ it could help you scan all playlist information and generate friendly markdown t
 npm i youtube-playlist-markdown --save
 ```
 
-## Example
+<!--
+#### Command Line Options
 
-* [How to Get YouTube API Key - Easy way - YouTube](https://www.youtube.com/watch?v=_U_VS12uu-o)
-### try it
+This generator can also be further configured with the following command line flags.
+
+    -h, --help          output usage information
+    -V, --version       output the version number
+    -C, --channel       generate all playlists
+    -P, --playlist      generate a playlist
+        --video         generate all videos
+    -f, --force         force on non-empty directory
+-->
+### Usage
+
+First, you need to get your API key, if you don't know how to do, maybe this video could help you.
+
+[How to Get YouTube API Key - Easy way - YouTube](https://www.youtube.com/watch?v=_U_VS12uu-o)
+
+then
 
 ```js
 const youtubePlaylistMarkdown = require('youtube-playlist-markdown');
@@ -59,10 +78,6 @@ cp config/default.json config/development.json
 vi config/development.json
 npm start
 ```
-
-### Output Example
-
-![](assets/output.png)
 
 ## Relevant Projects
 
