@@ -20,7 +20,7 @@ const getRow = function (config, item) {
   return R.slice(1, row.length, row);
 }
 
-const generatorPlaylistItemTable = function (file, playlist, channelTitle, channelUrl){
+const generatorPlaylistItemTable = function (file, playlist){
   debug('=== generatorPlaylistItemTable ===');
   let tableContent = [];
   playlist.items.forEach(function (item, index2) {
@@ -29,7 +29,7 @@ const generatorPlaylistItemTable = function (file, playlist, channelTitle, chann
     }
     tableContent.push(getRow(config, item));
   });
-  file.write(`\n\n#### [${playlist.title}](${playlist.playlistUrl}) created by [${channelTitle}](${channelUrl})\n\n`);
+  file.write(`\n\n#### [${playlist.playlistTitle}](${playlist.playlistUrl}) created by [${playlist.channelTitle}](${playlist.channelUrl})\n\n`);
   file.write(`* video count: ${playlist.items.length} \n\n`);
   file.write(table(tableContent));
   debug(table(tableContent));
@@ -40,9 +40,9 @@ const generatorAll = async function (config) {
     debug('=== generatorAll ===');
     let result = await ps.getSummary(config.CHANNEL_ID);
     let file = fs.createWriteStream(config.MARKDOWN_FILE_NAME || `channel-${config.CHANNEL_ID}.md`);
-    file.write(`### [${result.title}](${result.channelUrl})`);
+    file.write(`### [${result.channelTitle}](${result.channelUrl})`);
     result.items.forEach(function (playlist, index) {
-      generatorPlaylistItemTable(file, playlist, result.title, result.channelUrl);
+      generatorPlaylistItemTable(file, playlist);
     });
     file.end();
   } catch (error) {
