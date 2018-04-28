@@ -5,11 +5,9 @@
 ![node version](https://img.shields.io/node/v/youtube-playlist-markdown.svg)
 <!-- [![Dependency Status](https://img.shields.io/david/alincode/youtube-playlist-markdown.svg?style=flat)](https://david-dm.org/alincode/youtube-playlist-markdown) -->
 
-it could help you scan all playlist information and generate friendly markdown table.
+It could help you scan all playlist information and generate friendly markdown table, look like below.
 
-Look like this.
-
-[Output Example](https://github.com/alincode/youtube-playlist-markdown/blob/master/output_example.md)
+[Output markdown example](https://github.com/alincode/youtube-playlist-markdown/blob/master/output_example.md)
 
 ---
 ### [Modern Web](https://www.youtube.com/channel/UCJi9ZAuo99MqMuJUXiJjpsA)
@@ -27,8 +25,8 @@ Look like this.
 ---
 ### Features
 
-* you could choice get all playlist or only one.
-* you could use `TODO` variable to change the table style.
+* You could choice get all playlist or only one.
+* You could use `TODO` variable to change the table style.
 ### Requirements
 
 * node 8.x.x
