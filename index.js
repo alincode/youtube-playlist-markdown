@@ -20,7 +20,7 @@ const getRow = function (config, item) {
   return R.slice(1, row.length, row);
 }
 
-const generatorPlaylistItemTable = function (file, playlist){
+const generatorPlaylistItemTable = function (file, playlist, channelTitle, channelUrl){
   debug('=== generatorPlaylistItemTable ===');
   let tableContent = [];
   playlist.items.forEach(function (item, index2) {
@@ -29,8 +29,7 @@ const generatorPlaylistItemTable = function (file, playlist){
     }
     tableContent.push(getRow(config, item));
   });
-  file.write(`#### ${playlist.title} \n\n`);
-  file.write(`* [playlist link](${playlist.playlistUrl}) \n`);
+  file.write(`\n\n#### [${playlist.title}](${playlist.playlistUrl}) created by [${channelTitle}](${channelUrl})\n\n`);
   file.write(`* video count: ${playlist.items.length} \n\n`);
   file.write(table(tableContent));
   debug(table(tableContent));
@@ -41,10 +40,9 @@ const generatorAll = async function (config) {
     debug('=== generatorAll ===');
     let result = await ps.getSummary(config.CHANNEL_ID);
     let file = fs.createWriteStream(config.MARKDOWN_FILE_NAME || `channel-${config.CHANNEL_ID}.md`);
-    file.write(`### [${result.title}](${result.channelUrl}) \n\n`);
-
+    file.write(`### [${result.title}](${result.channelUrl})`);
     result.items.forEach(function (playlist, index) {
-      generatorPlaylistItemTable(file, playlist);
+      generatorPlaylistItemTable(file, playlist, result.title, result.channelUrl);
     });
     file.end();
   } catch (error) {
@@ -55,14 +53,13 @@ const generatorAll = async function (config) {
 const generatorPlaylist = async function (config) {
   debug('=== generatorPlaylist ===');
   try {
-    let result = await ps.getPlaylistItems(config.PLAYLIST_ID);
+    let playlist = await ps.getPlaylistItems(config.PLAYLIST_ID);
     let file = fs.createWriteStream(config.MARKDOWN_FILE_NAME || `playlist-${config.PLAYLIST_ID}.md`);
-    generatorPlaylistItemTable(file, result);
+    generatorPlaylistItemTable(file, playlist);
     file.end();
   } catch (error) {
     throw error;
   }
-
 }
 
 const generator = async function (config) {
