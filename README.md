@@ -1,6 +1,6 @@
 # Youtube playlist markdown
 
-![GitHub package version](https://img.shields.io/github/package-json/v/badges/shields.svg)
+![GitHub package version](https://img.shields.io/github/package-json/v/alincode/youtube-playlist-markdown.svg)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![node version](https://img.shields.io/node/v/youtube-playlist-markdown.svg)
 
