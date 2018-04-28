@@ -1,6 +1,6 @@
 {
   "name": "youtube-playlist-markdown",
-  "version": "0.3.6",
+  "version": "0.4.0",
   "description": "it could help you scan all playlist information, and generate friendly markdown table",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,11 @@
     "playlist",
     "markdown"
   ],
-  "author": "alincode <alincode@gmail.com>",
+  "author": {
+    "name": "alincode",
+    "email": "alincode@gmail.com",
+    "url": "https://github.com/alincode"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -29,6 +33,6 @@
     "config": "^1.30.0",
     "debug": "^3.1.0",
     "markdown-table": "^1.1.2",
-    "youtube-playlist-summary": "^0.2.2"
+    "youtube-playlist-summary": "^0.3.0"
   }
 }
