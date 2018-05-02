@@ -6,7 +6,7 @@
   "scripts": {
     "example": "node example.js",
     "dev": "DEBUG=youtubePlaylistMarkdown node example.js",
-    "release": "npm version minor && npm publish",
+    "release": "npm version minor",
     "lint": "eslint ."
   },
   "keywords": [

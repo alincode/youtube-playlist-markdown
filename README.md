@@ -26,7 +26,6 @@ It could help you scan all playlist information and generate friendly markdown t
 ### Features
 
 * You could choose get all playlist or only one.
-* You could use `TODO` variable to change the table style.
 ### Requirements
 
 * node 8.x.x
@@ -62,6 +61,7 @@ ypm.generatorAll(channelId);
 ## Relevant Projects
 
 * [youtube-playlist-summary](https://github.com/alincode/youtube-playlist-summary)
+* [youtube-playlist-markdonw-cli](https://github.com/alincode/youtube-playlist-markdown-cli)
 
 ## License
 
