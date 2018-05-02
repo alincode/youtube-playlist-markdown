@@ -2,14 +2,16 @@ const debug = require('debug')('youtubePlaylistMarkdown');
 const fs = require('fs');
 const table = require('markdown-table');
 const PlaylistSummary = require('youtube-playlist-summary');
-const config = require('config');
-const ps = new PlaylistSummary(config);
+
+let config = {
+  GOOOGLE_API_KEY: process.env.GOOOGLE_API_KEY
+};
 
 const getFieldNames = function() {
   return ['title', 'Published At'];
 };
 
-const getRow = function (config, item) {
+const getRow = function (item) {
   let videoTitle = `[${item.title}](${item.videoUrl})`;
   let publishedAt = item.publishedAt.substr(0, 10);
   return [videoTitle, publishedAt];
@@ -22,7 +24,7 @@ const generatorPlaylistItemTable = async function (file, playlist) {
     if (index == 0) {
       tableContent.push(getFieldNames());
     }
-    tableContent.push(getRow(config, item));
+    tableContent.push(getRow(item));
   });
   file.write(`\n\n#### [${playlist.playlistTitle}](${playlist.playlistUrl}) created by [${playlist.channelTitle}](${playlist.channelUrl})\n\n`);
   file.write(`* video count: ${playlist.items.length} \n\n`);
@@ -35,13 +37,14 @@ class PlaylistMarkdown {
   constructor(config) {
     this.config = config;
     debug(config);
+    this.ps = new PlaylistSummary(config);
   }
 
   async generatorPlaylist(playlistId) {
     debug('=== generatorPlaylist ===');
     try {
-      let playlist = await ps.getPlaylistItems(playlistId);
-      let file = fs.createWriteStream(this.config.MARKDOWN_FILE_NAME || `playlist-${playlistId}.md`);
+      let playlist = await this.ps.getPlaylistItems(playlistId);
+      let file = fs.createWriteStream(`playlist-${playlistId}.md`);
       generatorPlaylistItemTable(file, playlist);
       file.end();
     } catch (error) {
@@ -52,8 +55,8 @@ class PlaylistMarkdown {
   async generatorAll(channelId) {
     try {
       debug('=== generatorAll ===');
-      let result = await ps.getSummary(channelId);
-      let file = fs.createWriteStream(this.config.MARKDOWN_FILE_NAME || `channel-${channelId}.md`);
+      let result = await this.ps.getSummary(channelId);
+      let file = fs.createWriteStream(`channel-${channelId}.md`);
       file.write(`### [${result.channelTitle}](${result.channelUrl})`);
       result.items.forEach(function (playlist) {
         generatorPlaylistItemTable(file, playlist);
