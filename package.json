@@ -6,7 +6,7 @@
   "scripts": {
     "example": "node example.js",
     "dev": "DEBUG=youtubePlaylistMarkdown node example.js",
-    "release": "rm -rf package-lock.json && npm version minor",
+    "release": "rm -rf package-lock.json && npm version minor && npm publish",
     "lint": "eslint ."
   },
   "keywords": [
@@ -34,7 +34,7 @@
   "dependencies": {
     "debug": "^3.1.0",
     "markdown-table": "^1.1.2",
-    "youtube-playlist-summary": "^1.0.0"
+    "youtube-playlist-summary": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1"
