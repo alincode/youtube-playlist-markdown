@@ -1,4 +1,7 @@
-const youtubePlaylistMarkdown = require('./index');
+const YoutubePlaylistMarkdown = require('./index');
 const config = require('config');
 
-youtubePlaylistMarkdown(config);
+let ypm = new YoutubePlaylistMarkdown(config);
+
+ypm.generatorPlaylist();
+ypm.generatorAll();

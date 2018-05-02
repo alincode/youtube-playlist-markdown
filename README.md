@@ -25,7 +25,7 @@ It could help you scan all playlist information and generate friendly markdown t
 ---
 ### Features
 
-* You could choice get all playlist or only one.
+* You could choose get all playlist or only one.
 * You could use `TODO` variable to change the table style.
 ### Requirements
 
@@ -35,19 +35,6 @@ It could help you scan all playlist information and generate friendly markdown t
 ```
 npm i youtube-playlist-markdown --save
 ```
-
-<!--
-#### Command Line Options
-
-This generator can also be further configured with the following command line flags.
-
-    -h, --help          output usage information
-    -V, --version       output the version number
-    -C, --channel       generate all playlists
-    -P, --playlist      generate a playlist
-        --video         generate all videos
-    -f, --force         force on non-empty directory
--->
 ### Usage
 
 First, you need to get your API key, if you don't know how to do, maybe this video could help you.
@@ -76,18 +63,6 @@ const config = {
 }
 
 youtubePlaylistMarkdown(config);
-```
-
-or
-
-Then make your own config, you could copy `config/example.json` to `config/development.json`.
-
-```bash
-git clone https://github.com/alincode/youtube-playlist-markdown
-cd youtube-playlist-markdown
-cp config/default.json config/development.json
-vi config/development.json
-npm start
 ```
 
 ## Relevant Projects
