@@ -1,12 +1,12 @@
 {
   "name": "youtube-playlist-markdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "It could help you scan all playlist information and generate friendly markdown table",
   "main": "index.js",
   "scripts": {
     "example": "node example.js",
     "dev": "DEBUG=youtubePlaylistMarkdown node example.js",
-    "release": "npm version minor",
+    "release": "rm -rf package-lock.json && npm version minor",
     "lint": "eslint ."
   },
   "keywords": [
