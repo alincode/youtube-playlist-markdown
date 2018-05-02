@@ -6,8 +6,9 @@
   "scripts": {
     "example": "node example.js",
     "dev": "DEBUG=youtubePlaylistMarkdown node example.js",
+    "lint": "eslint .",
     "release": "rm -rf package-lock.json && npm version minor && npm publish",
-    "lint": "eslint ."
+    "patch": "rm -rf package-lock.json && npm version patch && npm publish"
   },
   "keywords": [
     "youtube",
