@@ -44,25 +44,19 @@ First, you need to get your API key, if you don't know how to do, maybe this vid
 then
 
 ```js
-const youtubePlaylistMarkdown = require('youtube-playlist-markdown');
+const YoutubePlaylistMarkdown = require('youtube-playlist-markdown');
 
-// if you want to get all playlist
 const config = {
-    "GOOOGLE_API_KEY": "YOUR_GOOOGLE_API_KEY",
-    "MARKDOWN_FILE_NAME": "generator.md", // option
-    "CHANNEL_ID": "UCJi9ZAuo99MqMuJUXiJjpsA",
-    "TODO": false // option
-}
+  "GOOOGLE_API_KEY": "========== YOUR_GOOGLE_API_KEY =========="
+};
 
-// if you only want to get a playlist
-const config = {
-    "GOOOGLE_API_KEY": "YOUR_GOOOGLE_API_KEY",
-    "MARKDOWN_FILE_NAME": "generator.md", // option
-    "PLAYLIST_ID": "PL0y7qCn3hjLbmQ5_aQZEfQDQCgcK6A2CP",
-    "TODO": false // option
-}
+let ypm = new YoutubePlaylistMarkdown(config);
 
-youtubePlaylistMarkdown(config);
+const playlistId = 'PLrG78JjvL7hWqX2FW54Ck8UP45fbWQXcu';
+ypm.generatorPlaylist(playlistId);
+
+const channelId = 'UCJi9ZAuo99MqMuJUXiJjpsA';
+ypm.generatorAll(channelId);
 ```
 
 ## Relevant Projects

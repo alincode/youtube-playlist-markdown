@@ -2,22 +2,17 @@ const debug = require('debug')('youtubePlaylistMarkdown');
 const fs = require('fs');
 const table = require('markdown-table');
 const PlaylistSummary = require('youtube-playlist-summary');
-const R = require('ramda');
 const config = require('config');
 const ps = new PlaylistSummary(config);
 
-const getFieldNames = function(config) {
-  let fieldNames = ['TODO', 'title', 'Published At'];
-  if (config.TODO) return fieldNames;
-  return R.slice(1, fieldNames.length, fieldNames);
+const getFieldNames = function() {
+  return ['title', 'Published At'];
 };
 
 const getRow = function (config, item) {
   let videoTitle = `[${item.title}](${item.videoUrl})`;
   let publishedAt = item.publishedAt.substr(0, 10);
-  let row = ['[ ]', videoTitle, publishedAt];
-  if (config.TODO) return row;
-  return R.slice(1, row.length, row);
+  return [videoTitle, publishedAt];
 };
 
 const generatorPlaylistItemTable = async function (file, playlist) {
@@ -25,7 +20,7 @@ const generatorPlaylistItemTable = async function (file, playlist) {
   let tableContent = [];
   playlist.items.forEach(function (item, index) {
     if (index == 0) {
-      tableContent.push(getFieldNames(config));
+      tableContent.push(getFieldNames());
     }
     tableContent.push(getRow(config, item));
   });
@@ -39,16 +34,14 @@ class PlaylistMarkdown {
 
   constructor(config) {
     this.config = config;
-    this.CHANNEL_ID = config.CHANNEL_ID;
-    this.PLAYLIST_ID = config.PLAYLIST_ID;
     debug(config);
   }
 
-  async generatorPlaylist() {
+  async generatorPlaylist(playlistId) {
     debug('=== generatorPlaylist ===');
     try {
-      let playlist = await ps.getPlaylistItems(this.PLAYLIST_ID);
-      let file = fs.createWriteStream(this.config.MARKDOWN_FILE_NAME || `playlist-${this.PLAYLIST_ID}.md`);
+      let playlist = await ps.getPlaylistItems(playlistId);
+      let file = fs.createWriteStream(this.config.MARKDOWN_FILE_NAME || `playlist-${playlistId}.md`);
       generatorPlaylistItemTable(file, playlist);
       file.end();
     } catch (error) {
@@ -56,11 +49,11 @@ class PlaylistMarkdown {
     }
   }
 
-  async generatorAll() {
+  async generatorAll(channelId) {
     try {
       debug('=== generatorAll ===');
-      let result = await ps.getSummary(this.CHANNEL_ID);
-      let file = fs.createWriteStream(this.config.MARKDOWN_FILE_NAME || `channel-${this.CHANNEL_ID}.md`);
+      let result = await ps.getSummary(channelId);
+      let file = fs.createWriteStream(this.config.MARKDOWN_FILE_NAME || `channel-${channelId}.md`);
       file.write(`### [${result.channelTitle}](${result.channelUrl})`);
       result.items.forEach(function (playlist) {
         generatorPlaylistItemTable(file, playlist);
