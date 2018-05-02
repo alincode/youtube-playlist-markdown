@@ -5,11 +5,11 @@
 ![node version](https://img.shields.io/node/v/youtube-playlist-markdown.svg)
 <!-- [![Dependency Status](https://img.shields.io/david/alincode/youtube-playlist-markdown.svg?style=flat)](https://david-dm.org/alincode/youtube-playlist-markdown) -->
 
-It could help you scan all playlist information and generate friendly markdown table, look like below.
+It could help you scan all playlist information and generate friendly markdown table, look like below. if you want to use [**cli mode**](https://www.npmjs.com/package/youtube-playlist-markdown-cli), you could go [here](https://www.npmjs.com/package/youtube-playlist-markdown-cli).
 
-[Output markdown example](https://github.com/alincode/youtube-playlist-markdown/blob/master/output_example.md)
 
 ---
+## Show case
 ### [Modern Web](https://www.youtube.com/channel/UCJi9ZAuo99MqMuJUXiJjpsA)
 
 #### [【Modern Web 2015】國際會議廳 議程](https://www.youtube.com/playlist?list=PLr0GICQoHA0KDNV0HkH10_ieusLd_KVaz) created by [Modern Web](https://www.youtube.com/channel/UCJi9ZAuo99MqMuJUXiJjpsA)
@@ -23,6 +23,7 @@ It could help you scan all playlist information and generate friendly markdown t
 | [【Modern Web 2015】TypeScript 過去現在未來 - 高偉格OThree](https://www.youtube.com/watch?v=qFrvC7TQS14)                                      | 2015-06-12   |
 
 ---
+
 ### Features
 
 * You could choose get all playlist or only one.
