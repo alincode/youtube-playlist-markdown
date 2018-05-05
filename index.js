@@ -4,7 +4,7 @@ const table = require('markdown-table');
 const PlaylistSummary = require('youtube-playlist-summary');
 
 let config = {
-  GOOOGLE_API_KEY: process.env.GOOOGLE_API_KEY
+  GOOGLE_API_KEY: process.env.GOOGLE_API_KEY
 };
 
 const getFieldNames = function() {

@@ -1,7 +1,7 @@
 const YoutubePlaylistMarkdown = require('./index');
 
 let config = {
-  GOOOGLE_API_KEY: process.env.GOOOGLE_API_KEY
+  GOOGLE_API_KEY: process.env.GOOGLE_API_KEY
 };
 
 let ypm = new YoutubePlaylistMarkdown(config);

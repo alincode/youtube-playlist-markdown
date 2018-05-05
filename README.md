@@ -32,7 +32,7 @@ then
 const YoutubePlaylistMarkdown = require('youtube-playlist-markdown');
 
 const config = {
-  "GOOOGLE_API_KEY": "========== YOUR_GOOGLE_API_KEY =========="
+  "GOOGLE_API_KEY": "========== YOUR_GOOGLE_API_KEY =========="
 };
 
 let ypm = new YoutubePlaylistMarkdown(config);
