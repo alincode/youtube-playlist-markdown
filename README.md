@@ -12,9 +12,17 @@ It could help you scan all playlist information and generate friendly markdown t
 ### Features
 
 * You could choose get all playlist or only one.
+
+### Change Log
+
+change | version 
+---------|----------
+ Fixed content include special word | 1.4.3
+
 ### Requirements
 
 * node 8.x.x
+  
 ### Install
 
 ```
