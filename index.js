@@ -24,7 +24,7 @@ const generatorPlaylistItemTable = async function (file, playlist) {
     if (index == 0) {
       tableContent.push(getFieldNames());
     }
-    tableContent.push(getRow(item));
+    tableContent.push(getRow(item.replace(/\|/g, '-')));
   });
   file.write(`\n\n#### [${playlist.playlistTitle}](${playlist.playlistUrl}) created by [${playlist.channelTitle}](${playlist.channelUrl})\n\n`);
   file.write(`* video count: ${playlist.items.length} \n\n`);
