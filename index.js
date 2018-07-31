@@ -12,7 +12,7 @@ const getFieldNames = function() {
 };
 
 const getRow = function (item) {
-  let videoTitle = `[${item.title}](${item.videoUrl})`;
+  let videoTitle = `[${item.title.replace(/\|/g, '-')}](${item.videoUrl})`;
   let publishedAt = item.publishedAt.substr(0, 10);
   return [videoTitle, publishedAt];
 };
@@ -24,7 +24,7 @@ const generatorPlaylistItemTable = async function (file, playlist) {
     if (index == 0) {
       tableContent.push(getFieldNames());
     }
-    tableContent.push(getRow(item.replace(/\|/g, '-')));
+    tableContent.push(getRow(item));
   });
   file.write(`\n\n#### [${playlist.playlistTitle}](${playlist.playlistUrl}) created by [${playlist.channelTitle}](${playlist.channelUrl})\n\n`);
   file.write(`* video count: ${playlist.items.length} \n\n`);

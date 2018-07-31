@@ -9,5 +9,5 @@ let ypm = new YoutubePlaylistMarkdown(config);
 const playlistId = 'PLrG78JjvL7hWqX2FW54Ck8UP45fbWQXcu';
 ypm.generatorPlaylist(playlistId);
 
-const channelId = 'UCJi9ZAuo99MqMuJUXiJjpsA';
+const channelId = 'UCsvqVGtbbyHaMoevxPAq9Fg';
 ypm.generatorAll(channelId);
