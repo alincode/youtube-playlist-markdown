@@ -32,7 +32,7 @@ npm i youtube-playlist-markdown --save
 
 First, you need to get your API key, if you don't know how to do, maybe this video could help you.
 
-[How to Get YouTube API Key - Easy way - YouTube](https://www.youtube.com/watch?v=_U_VS12uu-o)
+[how to create YouTube API Key 2019 - YouTube](https://www.youtube.com/watch?v=3jZ5vnv-LZc)
 
 then
 
