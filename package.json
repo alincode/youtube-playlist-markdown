@@ -35,7 +35,7 @@
   "dependencies": {
     "debug": "^4.1.1",
     "markdown-table": "^1.1.3",
-    "youtube-playlist-summary": "^2.1.0"
+    "youtube-playlist-summary": "^2.1.3"
   },
   "devDependencies": {
     "eslint": "^6.1.0"
