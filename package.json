@@ -1,6 +1,6 @@
 {
   "name": "youtube-playlist-markdown",
-  "version": "1.4.8",
+  "version": "1.4.9",
   "description": "It could help you scan all playlist information and generate friendly markdown table",
   "main": "index.js",
   "scripts": {
